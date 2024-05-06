@@ -1,3 +1,9 @@
+@import './base.css';
+
+.nav-link.router-link-exact-active {
+  color: white !important;
+}
+
 /* @import './base.css';
 
 #app {

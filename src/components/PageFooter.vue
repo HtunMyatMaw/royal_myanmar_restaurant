@@ -1,6 +1,8 @@
 <template>
-    <footer class="bg-dark text-light py-2">
-        <small>Copyright &copy; {{ getCurrentYear }} RoyalMyanmar Restaurant</small>
+    <footer class="bg-dark text-light py-2 container-fluid">
+        <div>
+            <small>Copyright &copy; {{ getCurrentYear }} RoyalMyanmar Restaurant</small>
+        </div>
     </footer>
 </template>
 
@@ -14,6 +16,4 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

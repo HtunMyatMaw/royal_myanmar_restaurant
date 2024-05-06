@@ -1,6 +1,29 @@
 <template>
-    <main>
-        <h2>Notification</h2>
+    <main class="container py-5">
+        <h2>お知らせ</h2>
+        <section>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">日付</th>
+                        <th scope="col">タイトル</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td colspan="3" class="text-center">最近のお知らせはありません。</td>
+                    </tr>
+
+                    <!-- <tr>
+                        <th scope="row">1</th>
+                        <td></td>
+                        <td></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </section>
     </main>
 </template>
 

@@ -1,3 +1,16 @@
+:root {
+  --fs-normal: 1rem;
+  --fs-medium: 1.125rem;
+}
+
+body {
+  font-size: var(--fs-medium);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 /* color palette from <https://github.com/vuejs/theme> */
 /* :root {
   --vt-c-white: #ffffff;
