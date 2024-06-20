@@ -1,3 +1,4 @@
+import { FirebaseError } from 'firebase/app';
 import WorkDay from '@/dao/WorkDay';
 import {
     getSingleDocumentByDocId,
@@ -7,19 +8,19 @@ import {
     from '../firebase/readFirestoreData';
 
 async function getWorkingDays() {
-    try {
-        let dataList = []
-        let response = await getMultipleDocuments('working_days')
-        if (response) {
-            response.forEach(obj => dataList.push(WorkDay.fromFirestore(obj)))
-            return dataList
-        } else {
-            return null
-        }
-    } catch (error) {
-        // Error Handling
-        return error
-    }
+    return new Promise((resolve, reject) => {
+        getMultipleDocuments('working_days')
+        .then((response) => {
+            if(response instanceof FirebaseError) {
+                reject(response)
+            }else{
+                let dataList = []
+                response.forEach(obj => dataList.push(WorkDay.fromFirestore(obj)))
+                resolve(dataList)
+            }
+        })
+        .catch(error => reject(error))
+    })
 }
 
 export {

@@ -349,7 +349,10 @@
 <!-- <script setup>
 </script> -->
 
-<style>
+<style scoped>
+.carousel {
+  z-index: -1;
+}
 
 .container {
   font-family: 'Times New Roman', Times, serif;
