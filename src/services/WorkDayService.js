@@ -1,5 +1,8 @@
 import WorkDay from '@/dao/WorkDay';
 import {
+    orderBy
+} from '@/firebase/queryUtilsFirestore'
+import {
     getSingleDocumentByDocId,
     getMultipleDocuments,
     getMultipleDocumentsByQuery
@@ -9,7 +12,7 @@ import {
 async function getWorkingDays() {
     try {
         let dataList = []
-        let response = await getMultipleDocuments('working_days')
+        let response = await getMultipleDocumentsByQuery('working_days',[],[orderBy('dayId','asc')])
         if (response) {
             response.forEach(obj => dataList.push(WorkDay.fromFirestore(obj)))
             return dataList
