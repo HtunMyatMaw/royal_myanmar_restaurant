@@ -1,6 +1,6 @@
 <template>
     <main class="container py-5">
-        <h2>お知らせ</h2>
+        <h2 class="bottom_border p-2 mb-3">お知らせ</h2>
         <section>
             <table class="table">
                 <thead>

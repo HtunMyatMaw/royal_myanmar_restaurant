@@ -1,8 +1,8 @@
 <template>
-    <main>
+    <main class="container py-5">
+        <h2 class="bottom_border p-2 mb-3">ロイヤルミャンマーとは</h2>
         <section class="bg-white">
-            <div class="container py-5">
-                <h2>ロイヤルミャンマーとは</h2>
+            <div class="">
                 <h3>店の紹介</h3>
                 <p>
                     本店は2013年から沖縄県で始めてのミャンマー の店として、日本、沖繩、ミャンマーの間架け橋になることを目指し、ミャンマー の文化を沖縄の皆さんに紹介される事を目標しておりました。
@@ -17,7 +17,7 @@
         </section>
 
         <section class="bg-light">
-            <div class="container">
+            <div class="">
                 <div class="d-flex flex-wrap py-5">
                     <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
                         <img src="../assets/img/makyawt.webp" alt="チョ・チョ・カイ画像" class="img-circle">

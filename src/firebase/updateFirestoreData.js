@@ -8,27 +8,28 @@ import {
 } from 'firebase/firestore'
 
 
-async function addNewDocument(dbTableName, data, uniqId = null) {
-    if (uniqId) {
-        return await _addNewDocumentByAutoGenerateId(dbTableName, data)
+async function addNewDocument(obj) {
+    console.log(obj)
+    if (!obj.uniqId) {
+        return await _addNewDocumentByAutoGenerateId(obj)
     } else {
-        return await _addNewDocumentByDocId(dbTableName, data, uniqId)
+        return await _addNewDocumentByDocId(obj)
     }
 }
 
-const _addNewDocumentByDocId = async function (dbTableName, data, uniqId) {
+const _addNewDocumentByDocId = async function (obj) {
     try {
-        const docRef = doc(db, dbTableName, uniqId)
-        await setDoc(docRef, data)
-        return { 'status': 200, '': `Successfully inserted by docId=${uniqId}.` }
+        const docRef = doc(db, obj.dbTableName, obj.uniqId)
+        await setDoc(docRef, obj.data)
+        return { 'status': 200, '': `Successfully inserted by docId=${obj.uniqId}.` }
     } catch (error) {
         return error
     }
 }
 
-const _addNewDocumentByAutoGenerateId = async function (dbTableName, data) {
+const _addNewDocumentByAutoGenerateId = async function (obj) {
     try {
-        const docRef = await addDoc(collection(db, dbTableName), data)
+        const docRef = await addDoc(collection(db, obj.dbTableName), obj.data)
         return { 'status': 200, '': `Successfully inserted by docId=${docRef.id}.` }
     } catch (error) {
         return error

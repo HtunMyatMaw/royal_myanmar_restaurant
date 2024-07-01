@@ -4,6 +4,29 @@
   color: white !important;
 }
 
+.bottom_border {
+  position: relative;
+  border-left: .5rem solid #b05834; 
+  /* border-bottom: 2px solid gray; */
+  z-index: -1;
+}
+
+.bottom_border::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  content: '';
+  display: block;
+  /* border-top: 1px solid #7e3c22; */
+  border-top: 1px solid #b05834;
+  box-shadow: 0px 4px 8px #b05834;
+}
+
+.bg-theme {
+  background-color: #7e3c22 !important;
+}
+
 /* @import './base.css';
 
 #app {

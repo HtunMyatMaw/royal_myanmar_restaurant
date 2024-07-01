@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-dark text-light py-2 container-fluid">
+    <footer class="bg-dark text-light py-2 container-fluid" style="background-color: #7e3c22 !important;">
         <div>
             <small>Copyright &copy; {{ getCurrentYear }} RoyalMyanmar Restaurant</small>
         </div>

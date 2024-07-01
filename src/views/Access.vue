@@ -1,6 +1,6 @@
 <template>
     <main class="container py-5">
-        <h2>アクセス</h2>
+        <h2 class="bottom_border p-2 mb-3">アクセス</h2>
         <section class="d-flex flex-column col col-md-6 mb-5">
             <div class="d-flex gap-3">
                 <i class="bi bi-mailbox-flag"></i>

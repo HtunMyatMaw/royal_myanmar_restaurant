@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-sticky top-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-sticky top-0" style="background-color: #7e3c22 !important;">
         <div class="container-fluid">
             <RouterLink to="/" class="navbar-brand nav-link ps-0">Royal Myanmar</RouterLink>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -29,14 +29,32 @@
                             メニューリスト
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><h6 class="dropdown-header">食べ物メニュー</h6></li>
                             <li>
-                                <RouterLink to="/newMenu" class="dropdown-item">新メニュー</RouterLink>
+                                <RouterLink to="/friedFoodMenu" class="dropdown-item">揚げ物・炒め物</RouterLink>
                             </li>
                             <li>
-                                <RouterLink to="/singleMenu" class="dropdown-item">単品メニュー</RouterLink>
+                                <RouterLink to="/riceMenu" class="dropdown-item">お米メニュー</RouterLink>
                             </li>
                             <li>
-                                <RouterLink to="/drinkMenu" class="dropdown-item">ドリンクメニュー</RouterLink>
+                                <RouterLink to="/saladMenu" class="dropdown-item">サラダ物</RouterLink>
+                            </li>
+                            <li>
+                                <RouterLink to="/soupMenu" class="dropdown-item">スープ</RouterLink>
+                            </li>
+                            <li>
+                                <RouterLink to="/quickMenu" class="dropdown-item">クイックメニュー</RouterLink>
+                            </li>
+                            <li>
+                                <RouterLink to="/specialMenu" class="dropdown-item">一週間前注文</RouterLink>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">飲み物メニュー</h6></li>
+                            <li>
+                                <RouterLink to="/alcohol" class="dropdown-item">アルコール</RouterLink>
+                            </li>
+                            <li>
+                                <RouterLink to="/softdrink" class="dropdown-item">ソフトドリンク</RouterLink>
                             </li>
                         </ul>
                     </li>
